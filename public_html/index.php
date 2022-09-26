@@ -56,12 +56,12 @@ font-family: Tahoma, Verdana, Arial, sans-serif; }
 <details>
 <summary>DESAFIO 01</summary>
  <p><input type="checkbox">  Criar um novo disco com ao menos 10 MB. OPCIONAL: Criar um lvm chamado lv_disco; </p>
- <p><input type="checkbox">  Formatar o novo disco com ext4 e montar em /mnt/teste_deu_boa. Este ponto de montagem deve ser iniciado após um reboot. </p>
+ <p><input type="checkbox">  Criar uma partição no novo disco, e formata-lo em ext4. Em seguida monta-lo em /mnt/teste_deu_boa. Este ponto de montagem deve ser iniciado após um reboot. </p>
  <p><input type="checkbox">  Criar um novo usuário chamado tux e um novo grupo chamado de linux. </p>
  <p><input type="checkbox">  Tux deve ser membro de linux. </p>
- <p><input type="checkbox">  Alterar o diretório para que apenas o grupo linux possa gravar e ler e o owner deve ser root. Nenhum outro usuário deve ter acesso algum a esta pasta. </p>
+ <p><input type="checkbox">  Alterar o diretório /mnt/teste_deu_boa para que apenas o grupo linux possa ler e executar. O owner do deve ser root. Nenhum outro usuário deve ter acesso algum a esta pasta. </p>
  <p><input type="checkbox">  Criar as pastas dir1, dir2 e dir3 dentro de /mnt/teste_deu_boa </p>
- <p><input type="checkbox">  Estas pastas além da permissão de grupo, devem ter como owner o user tux;  </p>
+ <p><input type="checkbox">  Estas pastas (/mnt/teste_deu_boa/dir1, [...]) além da permissão de grupo, devem ter como owner o user tux;  </p>
  <p><input type="checkbox">  Com o usuário tux crie um arquivo dentro de dir2 chamado de run.sh e neste arquivo deve constar o conteudo abaixo. OBS: Teste o script para garantir que ele está rodando e trazendo a informação "Uhuul deu boa".: </p>
 <textarea name="text" cols="25" rows="3">
 #!/bin/bash
@@ -106,6 +106,7 @@ echo "Uhuul deu boa"
 <p><input type="checkbox"> Iniciar o serviço (dexando ele ativo no boot); </p>
 <p><input type="checkbox"> Verifique qual porta que o serviço iniciou; </p>
 <p><input type="checkbox"> Realizar acesso no seu servidor e encontrar os logs de acesso; </p>
+<p><input type="checkbox"> Force um restart do serviço e encontre dentro dos logs do sistema operacional este restart; </p>
 <p><input type="checkbox"> Encontrar o arquivo de conf httpd.conf utilizando os comandos visto no topico 4; </p>
 <p><input type="checkbox"> Verifique quais PIDs estão atrelados para o serviço httpd. Realize um stop, valide novamente, e por fim, um start no serviço e compare os PIDs nestes 3 momentos; </p>
 <p><input type="checkbox"> Personalize a sua página web com um arquivo index.html com a informação: </p>
@@ -168,9 +169,10 @@ Meu primeiro webserver, deu boa
 <details>
 <summary>DESAFIO 03</summary>
 <p><input type="checkbox"> Alterar o selinux para disabled</p>
-<p><input type="checkbox"> Criar regra de INPUT que bloqueie a entrada da porta 81, de comunicação vinda do seu IP (acesse em seu computador o ip.me para validar)</p>
-<p><input type="checkbox"> Crie uma regra de bloqueio para o OUTPUT com destino o endereço do DNS do seu servidor, na porta do DNS;</p>
-<li> Extra: Deixe esta regra ativa ao iniciar o servidor.</li>
+<p><input type="checkbox"> Criar regra de INPUT que bloqueie a entrada da porta 80, de comunicação vinda do seu IP (acesse em seu computador o ip.me para validar)</p>
+<p><input type="checkbox"> Verifique qual o endereço de DNS que seu computador está usando. </p>
+<p><input type="checkbox"> Crie uma regra de bloqueio para o OUTPUT com destino ao IP que foi encontrado anteriormente. na porta do DNS;</p>
+<li> Extra: Deixe esta regra ativa ao iniciar o servidor. OBS: Caso tenha algum problema de comunicação busque um novo DNS.</li>
 <p><input type="checkbox"> Libere no Oracle Cloud a porta 81 para qualquer origem.</p>
 <p><input type="checkbox"> Altere a porta do apache da 80 para a 81.</p>
 <p><input type="checkbox"> Alterar o DNS do seu servidor para o 8.8.8.8 e valide a resolução de nomes.</p>
