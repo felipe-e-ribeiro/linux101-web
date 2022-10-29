@@ -14,7 +14,7 @@ font-family: Tahoma, Verdana, Arial, sans-serif; }
 <li>srv-free01-felipe95</li>
 <h3>Estudos Linux</h3>
 <details>
-  <summary>Semana 01</summary>
+  <summary>Tópico 01</summary>
 <ol>
 <li> Estrutura de diretório</li>
 <ul>
@@ -74,7 +74,7 @@ echo "Uhuul deu boa"
 
 
 <details>
-  <summary>Semana 02</summary>
+  <summary>Tópico 02</summary>
 <ol>
 <li>Processos/PID</li><ul>
 <li>Entender como o linux organiza e identifica os processos;</li>
@@ -116,7 +116,7 @@ Meu primeiro webserver, deu boa
 </details>
 </details>
 <details>
-<summary>Semana 03</summary>
+<summary>Tópico 03</summary>
 <ol>
 <li>Firewall linux básico</li>
 <ul>
@@ -171,13 +171,12 @@ Meu primeiro webserver, deu boa
 <p><input type="checkbox"> Alterar o selinux para disabled</p>
 <p><input type="checkbox"> Criar regra de INPUT que bloqueie a entrada da porta 80, de comunicação vinda do seu IP (acesse em seu computador o ip.me para validar)</p>
 <p><input type="checkbox"> Verifique qual o endereço de DNS que seu computador está usando. </p>
-<p><input type="checkbox"> Crie uma regra de bloqueio para o OUTPUT com destino ao IP que foi encontrado anteriormente. na porta do DNS;</p>
+<p><input type="checkbox"> Crie um bloqueio com destino aos DNSs (encontrados no topico anterior) com a porta do DNS;</p>
 <li> Extra: Deixe esta regra ativa ao iniciar o servidor. OBS: Caso tenha algum problema de comunicação busque um novo DNS.</li>
 <p><input type="checkbox"> Libere no Oracle Cloud a porta 81 para qualquer origem.</p>
 <p><input type="checkbox"> Altere a porta do apache da 80 para a 81.</p>
 <p><input type="checkbox"> Alterar o DNS do seu servidor para o 8.8.8.8 e valide a resolução de nomes.</p>
-<p><input type="checkbox"> Teste o acesso do seu site através do próprio servidor para web-server.</p>
-<p><input type="checkbox"> Faça o próprio servidor resolver o nome web-server para o seu ip local internamente.</p>
+<p><input type="checkbox"> Dentro do seu servidor, faça com que o nome web-server seja resolvida com o ip interno. Em seguida para validar realize um curl para o nome web-server e garanta que houve o retorno correto.</p>
 </details>
 </details>
 </body>
